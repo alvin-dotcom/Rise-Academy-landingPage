@@ -1,0 +1,47 @@
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+    @media (min-width: 1400px) {
+        font-size: #{$pcSize + px};
+    }
+    @media (max-width: 1400px) {
+	    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+}
+
+@mixin link-decor {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.5px;
+    transition: width 0.3s ease-out;
+}
+
+@mixin line($left, $right, $color) {
+    content: '';
+    position: absolute;
+    width: #{$maxWidth + px};
+    height: 2px;
+    background-color: $color;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: $left;
+    right: $right;
+
+}

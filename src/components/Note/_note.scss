@@ -1,0 +1,36 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.note {
+    background-color: $lightgreen;
+    color: $beige;
+    padding: 0.8em 0;
+}
+
+
+.note__content {
+    text-align: center;
+}
+
+
+.note__title {
+    font-family: $second;
+    margin-bottom: 1.2em;
+}
+
+.note__text {
+    margin: 0 auto 0.8em;
+    max-width: 920px;
+    position: relative;
+
+    &::before {
+        @include line($line-pos, auto, $beige)
+    }
+
+    &::after {
+        @include line(auto, $line-pos, $beige)
+    }
+}
+.note__phone {
+    font-family: $second;
+}

@@ -1,0 +1,53 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.price {
+    padding: 1.5em 0; 
+}
+
+.price__title {
+    position: relative;
+    margin-bottom: 1em;
+    display: inline-block;
+
+    &::before {
+        @include line($line-pos, auto, $darkgreen)
+    }
+}
+
+.price__wrapper {
+    margin-left: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+
+    @include mobile {
+        margin-left: 25%;
+    }
+}
+
+.price__column {
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-evenly;
+    opacity: 0;
+
+    &.is-reveal {
+    opacity: 1;
+    }
+
+    @include mobile {
+        height: 200px;
+    }
+}
+
+.price__text {
+    text-align: center;
+}
+
+.price__numbers {
+    font-family: $second;
+    text-align: right;
+}

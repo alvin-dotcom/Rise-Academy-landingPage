@@ -1,0 +1,29 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .achivement__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    &::after {
+        @include line(auto, $line-pos, $darkgreen)
+    }
+}
+  h3 {
+    font-size: 40px;
+    background-color: $lightgreen;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 150px;
+    margin: 0px auto;
+    font-family: sans-serif;
+    margin: 0 50px;
+    margin-bottom: 50px;
+  }

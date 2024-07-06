@@ -1,0 +1,79 @@
+@import './vars';
+@import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Prata&display=swap');
+
+html.has-scroll-smooth {
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;  
+}
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+    font-family: $main;
+    color: $darkgreen;
+    @include adaptiv-font(36, 20)
+}
+
+.container {
+    max-width: #{$maxWidth + px};
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.mixed-second {
+    font-family: $second;
+}
+
+.mixed-main {
+    font-family: $main;
+}
+
+.title {
+    font-family: $second;
+    @include adaptiv-font(64, 44);
+    text-transform: uppercase;
+}
+
+.btns {
+    font-family: $second;
+    @include adaptiv-font(22, 18);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9em;
+}
+
+.btn-call, .btn-email {
+    text-align: center;
+    padding: 0.45em 3em;
+    border: solid 2px $btn;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: $btn;
+        color: $beige;
+    }
+}
+
+img {
+    border-radius: 3em 0px 3em;
+}
+
+
+.title__position {
+    text-align: right;
+}
+
+.none {
+    display: none !important;
+}
+
+

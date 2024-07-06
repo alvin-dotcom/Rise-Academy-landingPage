@@ -1,0 +1,39 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.payment {
+    padding: 0.8em;
+    background-color: $lightgreen;
+    color: $beige;
+    text-align: center;
+    font-family: $second;
+}
+
+.payment__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.payment__text {
+    max-width: 985px;
+    margin-bottom: 0.5em;
+
+    &:last-of-type {
+        margin-bottom: 1em;
+    }
+}
+
+
+.payment__phone {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        @include line($line-pos, auto, $beige)
+    }
+
+    &::after {
+        @include line(auto, $line-pos, $beige)
+    }
+}

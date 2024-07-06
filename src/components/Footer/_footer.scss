@@ -1,0 +1,55 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.footer {
+    padding: 1.2em 0;
+    background-color: $lightgreen;
+    color: $beige;
+    font-family: $second;
+}
+
+.footer__title {
+    text-align: center;
+    max-width: 865px;
+    @include adaptiv-font(32, 22);
+    margin: 0 auto 1.5em;
+    position: relative;
+
+    &::after {
+        @include line(-25%, auto, $beige);
+        top: 120%;
+    }
+}
+
+.footer__line {
+    margin-bottom: 0.7em;
+}
+
+.footer__content {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+        position: relative;
+    }
+
+    a::after {
+        background-color: $beige;
+        @include link-decor;
+    }
+    
+    & a:hover::after {
+        width: 100%;
+    }
+}
+
+.footer__text {
+    @include adaptiv-font(18, 16);
+
+    &:not(:last-child) {
+        margin-bottom: 0.8em;
+    }
+}
+

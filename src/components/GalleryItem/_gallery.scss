@@ -1,0 +1,62 @@
+@import '../App/mixins';
+@import '../App/vars';
+
+.services__info {
+    display: inline-block;
+    width: 100vw;
+  
+    &.is-reveal {
+      .services-info__img {
+        transform: scale(1);
+        filter: none;
+      }
+    }
+  }
+  
+  .services-info__img {
+    width: 60vw;
+    height: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 0.5em;
+    position: relative;
+    will-change: transform;
+    transform: scale(0.7);
+    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+    filter: grayscale(100%) brightness(70%);
+
+    @include tablet {
+      width: 80vw;
+      height: 50%;
+    }
+
+  }
+  
+  
+  
+  .services-info__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: $beige;
+    width: 100%;
+    background-color: rgba($darkgreen, 0.3);
+    font-family: $second;
+    @include adaptiv-font(50, 30);
+  
+    
+  
+  
+  }
+  
+  .services-info__text {
+    @include adaptiv-font(24, 16);
+    max-width: 60vw;
+  
+    @include tablet {
+      max-width: 80vw;
+    }
+  }
+  

@@ -1,0 +1,75 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.contacts {
+    padding: 2em 0; 
+    font-family: $second;
+}
+
+.contacts__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+
+    &::after {
+        @include line(auto, $line-pos, $darkgreen)
+    }
+}
+
+.contacts__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contacts__text {
+    &:not(:last-child) {
+        margin-bottom: 0.7em;
+    }
+
+    &:nth-child(3) {
+        margin-bottom: 0.2em;
+    }
+
+    &:nth-child(4) {
+        margin-bottom: 2em;
+    }
+    
+}
+
+.contacts__text-secondary {
+    font-family: $main;
+    @include adaptiv-font(20, 14);
+}
+
+.contacts__map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contacts__info {
+    opacity: 0;
+
+    &.is-reveal {
+    opacity: 1;
+    }
+}
+
+
+

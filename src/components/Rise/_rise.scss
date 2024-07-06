@@ -1,0 +1,23 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.insurance {
+    padding: 0.8em;
+    background-color: $lightgreen;
+    color: $beige;
+    text-align: center;
+}
+
+.insurance__text {
+    margin: 0 auto 0.8em;
+    max-width: 745px;
+    position: relative;
+
+    &::before {
+        @include line($line-pos, auto, $beige)
+    }
+
+    &::after {
+        @include line(auto, $line-pos, $beige)
+    }
+}

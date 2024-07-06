@@ -1,0 +1,67 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+
+
+.header__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3em;
+    align-content: center;
+    min-height: 100vh;
+    align-items: center;
+    padding: 3em 0 3em;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        padding: 3em 0 6em;
+    }
+
+    @include mobile {
+        padding: 3em 0 3em;
+    }
+
+}
+
+.header__title {
+    margin-bottom: 0.5em;
+    max-width: 450px;
+}
+
+.header__subtitle {
+    margin-bottom: 1em;
+}
+
+.header__text {
+    @include adaptiv-font(24, 18);
+    max-width: 295px;
+
+}
+
+.header__btns {
+    margin-bottom: 1.5em;
+}
+
+.header__img {
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+    &.is-reveal {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+.lineParent{
+    overflow: hidden;
+    .lineChildren{
+      transform: translate(0, 200px);
+    }
+}
+
+.anim {
+    opacity: 0;
+    transform: translate(0, 50px)
+}
+
+
+
+

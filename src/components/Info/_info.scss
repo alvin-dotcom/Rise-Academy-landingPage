@@ -1,0 +1,27 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.info-for-clients {
+    font-family: $second;
+    background-color: $lightgreen;
+    color: $beige;
+    padding: 0.8em 0;
+    text-align: center;
+}
+
+.info-for-clients__text:not(:last-of-type) {
+    margin-bottom: 0.5em;
+}
+
+.info-for-clients__lines {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+        @include line($line-pos, auto, $beige)
+    }
+
+    &::after {
+        @include line(auto, $line-pos, $beige)
+    }
+}

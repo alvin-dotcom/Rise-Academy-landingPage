@@ -1,0 +1,65 @@
+@import '../App/vars';
+@import '../App/mixins';
+
+.team {
+    padding: 2em 0;
+}
+
+
+.team__title {
+    position: relative;
+    margin-bottom: 1em;
+    display: inline-block;
+
+    &::before {
+        @include line($line-pos, auto, $darkgreen)
+    }
+}
+
+
+.team__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3em;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+
+        &:nth-child(2) img {
+            order:1;
+        } 
+    }
+
+    &.is-reveal {
+        .team-info__text {
+            opacity: 1;
+        }
+
+        .team-info__img {
+            clip-path: inset(0% 0% 0% 0%);
+        }
+    }
+}
+
+.team-info__text {
+    max-width: 590px;
+    opacity: 0;
+}
+
+
+.team__text {
+    max-width: 650px;
+    @include adaptiv-font(32, 22);
+    margin-bottom: 1.3em;
+}
+
+
+
+.team-info__img {
+    clip-path: inset(100% 0% 0% 0%);
+    transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+

@@ -23,8 +23,6 @@
     gap: 1.8em;
     font-size: 18px;
 
-
-
     @include tablet {
         position: fixed;
         top: -100%;
@@ -41,13 +39,14 @@
         gap: 2.8em;
         transition: 0.3s;
         z-index: 3;
+        pointer-events: none;
 
         &--active {
             top: 0;
             opacity: 1;
+            pointer-events: auto;
         }
     } 
-    
 }
 
 .list-item {
@@ -62,23 +61,22 @@
     &:hover::after {
         width: 100%;
     }
-
 }
 
 .burger {
-	display: none;
+    display: none;
     cursor: pointer;
 
-	@include tablet {
-		display: block;
-		position: relative;
-		width: 30px;
-		height: 24px;
-		padding: 0;
-		border: none;
-		background: none;
-		transition: all .4s;
-	}
+    @include tablet {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background: none;
+        transition: all .4s;
+    }
 
     div {
         transition: all .4s;
@@ -102,19 +100,14 @@
     }
 }
 
-
-.burger--active {
-
-    div:nth-child(1) {
-        transform: translateY(11px) rotate(-45deg);
-    }
-
-    div:nth-child(2) {
-        transform: translateY(1px) rotate(45deg);
-    }
-
-    div:nth-child(3) {
-        transform: scale(0) translate(0, -50%);
-    }
+.burger--active div:nth-child(1) {
+    transform: translateY(11px) rotate(-45deg);
 }
 
+.burger--active div:nth-child(2) {
+    transform: translateY(1px) rotate(45deg);
+}
+
+.burger--active div:nth-child(3) {
+    transform: scale(0) translate(0, -50%);
+}

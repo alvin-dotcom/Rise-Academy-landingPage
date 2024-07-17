@@ -25,7 +25,7 @@ const Navbar = () => {
         }, 
         {
             text: 'Testimonials',
-            section: '#services'
+            section: '#testimonial'
         },
         {
             text: 'Our Offerings',

@@ -1,42 +1,65 @@
-import React from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "./_testi.scss";
 
-
-import './_testi.scss'
-
-const Services = () => {
-    const settings = {
-      dots: true,
-      speed: 500,
-      fade: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
-    };
-  
+export default class Testimonials extends Component {
+  render() {
     return (
-      <div>
-        <h2 className="contacts__title title" id="services">Testimonials</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>FIRST SLIDE</h3>
+      <div className='testimonial'>
+        <h2 className="testimonial__title title" id="testimonial">Testimonial</h2>
+      <Carousel
+        showArrows={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        autoPlay={true}
+        interval={3100}
+      >
+        <div>
+          {/* <img src="/images/adarsh.png" /> */}
+          <div className="myCarousel">
+            <h3>Adarsh Kumar (Batch 22)</h3>
+            <h4>student</h4>
+            <p>
+            From an below average boy to getting 91 in physics, sir guided me wherever needed. Either it be extra classes or virtual doubt solving. Sir made my career.
+            </p>
           </div>
-          <div>
-            <h3>SECOND SLIDE</h3>
+        </div>
+
+        <div>
+          {/* <img src="/images/alvin.png" /> */}
+          <div className="myCarousel">
+            <h3>Alvin Albert Michael (Batch 22)</h3>
+            <h4>Student</h4>
+            <p>
+            Fascinated by his teaching, he made physics soo easy for me. always helping in my journey
+            </p>
           </div>
-          <div>
-            <h3>THIRD SLIDE</h3>
+        </div>
+
+        <div>
+          {/* <img src="/images/jatin.png" /> */}
+          <div className="myCarousel">
+            <h3>Divyanshu Kumar (Batch 22)</h3>
+            <h4>student</h4>
+            <p>
+            As a slow learner I always needed extra from my teachers, and sir was always there for me. he gives individual attention to each student
+            </p>
           </div>
-          <div>
-            <h3>FORTH SLIDE</h3>
+        </div>
+        <div>
+          {/* <img src="/images/jatin.png" /> */}
+          <div className="myCarousel">
+            <h3>Aayush Kumar (Batch 22)</h3>
+            <h4>student</h4>
+            <p>
+            Joined in class 12.I was so frustrated after taking science stream. But his way of teaching changed the situation and my grades too
+            </p>
           </div>
-        </Slider>
+        </div>
+      </Carousel>
       </div>
     );
-  };
-
-export default Services
+  }
+}

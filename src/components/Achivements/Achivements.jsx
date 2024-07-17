@@ -1,40 +1,58 @@
-import React from 'react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "./_achivements.scss";
 
-import './_achivements.scss'
-
-const Achivements = () => {
-    const settings = {
-      dots: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 2000,
-    };
-  
+export default class Achivements extends Component {
+  render() {
     return (
       <div className='achivement'>
         <h2 className="achivement__title title" id="achivements">Achivements</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>FIRST SLIDE</h3>
+      <Carousel
+        showArrows={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        showStatus={false}
+        autoPlay={true}
+        interval={3100}
+      >
+        <div>
+          <img src="/images/shirley.png" />
+          <div className="myCarousel">
+            <h3>Shirley Fultz</h3>
+            <h4>Designer</h4>
+            <p>
+              It's freeing to be able to catch up on customized news and not be
+              distracted by a social media element on the same site
+            </p>
           </div>
-          <div>
-            <h3>SECOND SLIDE</h3>
+        </div>
+
+        <div>
+          <img src="/images/daniel.png" />
+          <div className="myCarousel">
+            <h3>Daniel Keystone</h3>
+            <h4>Designer</h4>
+            <p>
+              The simple and intuitive design makes it easy for me use. I highly
+              recommend Fetch to my peers.
+            </p>
           </div>
-          <div>
-            <h3>THIRD SLIDE</h3>
+        </div>
+
+        <div>
+          <img src="/images/theo.png" />
+          <div className="myCarousel">
+            <h3>Theo Sorel</h3>
+            <h4>Designer</h4>
+            <p>
+              I enjoy catching up with Fetch on my laptop, or on my phone when
+              I'm on the go!
+            </p>
           </div>
-          <div>
-            <h3>FORTH SLIDE</h3>
-          </div>
-        </Slider>
+        </div>
+      </Carousel>
       </div>
     );
-  };
-
-export default Achivements
+  }
+}

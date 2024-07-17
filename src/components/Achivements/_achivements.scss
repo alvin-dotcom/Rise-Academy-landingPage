@@ -1,33 +1,150 @@
 @import '../App/vars';
 @import '../App/mixins';
 
+.carousel-root {
+  width: 80% !important; /* Adjust the width as needed */
+  margin: auto !important;
+  margin-top: 3% !important;
+}
 
+.carousel .slide {
+  background: #fff !important;
+  color: black;
+  height: 200px !important; /* Set a fixed height for the rectangular shape */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: center; /* Center the content horizontally */
+}
 
-body {
-    margin: 0;
-    padding: 0;
+.carousel .slide img {
+  width: auto !important;
+  max-height: 80% !important; /* Ensure the image fits within the slide */
+  border-radius: 10px; /* Optional: slight rounding for a rectangular shape */
+}
+
+.myCarousel {
+  background: #fafafa;
+  margin-top: -6%;
+  width: 80%; /* Adjust the width as needed */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  height: 100%; /* Ensure it takes the full height of the parent */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  text-align: center; /* Center the text */
+}
+
+.carousel .control-dots {
+  padding-left: 5px !important;
+  outline: 0;
+  bottom: 10px !important;
+}
+
+.myCarousel h3 {
+  color: #222;
+  font-weight: 100;
+  letter-spacing: 0.2px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.myCarousel h4 {
+  text-transform: uppercase;
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 500;
+  color: #787878;
+  font-size: 14px;
+}
+
+.myCarousel p {
+  font-weight: 100 !important;
+  line-height: 29px !important;
+  color: #222;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.myCarousel p:before {
+  content: "“";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.myCarousel p:after {
+  content: "”";
+  color: #aaa;
+  font-size: 26px;
+  font-family: monospace;
+  font-weight: 100;
+  line-height: 0;
+}
+
+.carousel .control-dots .dot {
+  box-shadow: none !important;
+  background: #454545 !important;
+  outline: 0;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background: #000 !important;
+  height: 50px !important;
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+.App {
+  text-align: center;
+}
+
+@media only screen and (max-width: 934px) {
+  .carousel-root {
+    width: 93% !important;
+    margin: auto !important;
   }
 
-  .achivement {
-    padding: 2em 0; 
-}
-  .achivement__title {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 1em;
+  .carousel .slide {
+    height: auto !important; /* Adjust height for responsiveness */
+    flex-direction: column;
+  }
 
-    &::after {
-        @include line(auto, $line-pos, $darkgreen)
-    }
-}
-  h3 {
-    font-size: 40px;
-    background-color: $lightgreen;
+  .carousel .slide img {
+    width: 80% !important; /* Ensure the image fits within the slide */
+    max-height: 50% !important;
+    margin-bottom: 20px;
+  }
+
+  .myCarousel {
+    background: #fafafa;
+    margin-top: 0;
+    width: 93%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    border-radius: 5px;
-    padding: 150px 0;
-    margin: 0px auto;
-    font-family: sans-serif;
-    margin: 0 50px;
+    text-align: center;
   }
+}
+.achivement {
+  padding: 2em 0; 
+}
+.achivement__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  margin-left: .4em;
+
+  &::after {
+      @include line(auto, $line-pos, $darkgreen)
+  }
+}

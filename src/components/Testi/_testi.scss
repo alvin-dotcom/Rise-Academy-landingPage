@@ -153,7 +153,7 @@ html, body {
   position: relative;
   display: inline-block;
   margin-bottom: 1em;
-  margin-left: .4em; /* Added left margin */
+  margin-left: .1em; /* Added left margin */
 
   &::after {
     @include line(auto, $line-pos, $darkgreen);

@@ -7,7 +7,7 @@ export default class Testimonials extends Component {
   render() {
     return (
       <div className='testimonial'>
-        <h2 className="testimonial__title title" id="testimonial">Testimonial</h2>
+        <h2 className="testimonial__title title" id="testimonial">Testimonials</h2>
       <Carousel
         showArrows={true}
         infiniteLoop={true}

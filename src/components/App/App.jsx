@@ -54,8 +54,9 @@ const App = () => {
                 <Navbar />
                 <Main/>
                 <Note/>
-                <About/>
                 <Achivements/>
+                <About/>
+                
                 <Guru/>
                 <Rise/>
                 <Testi/>

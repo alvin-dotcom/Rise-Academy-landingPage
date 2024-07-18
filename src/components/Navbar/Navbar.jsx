@@ -20,10 +20,6 @@ const Navbar = () => {
             section: '#about'
         }, 
         {
-            text: 'Achivements',
-            section: '#achivements'
-        }, 
-        {
             text: 'Testimonials',
             section: '#testimonial'
         },

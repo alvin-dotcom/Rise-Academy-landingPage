@@ -56,7 +56,6 @@ const App = () => {
                 <Note/>
                 <Achivements/>
                 <About/>
-                
                 <Guru/>
                 <Rise/>
                 <Testi/>

@@ -142,7 +142,8 @@
 
   /* Adjust testimonial title for mobile view */
   .testimonial__title {
-    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -163,8 +164,9 @@ html, body {
   position: relative;
   display: inline-block;
   margin-bottom: 1em;
-  margin-left: .3em; /* Added left margin */
+  margin-left: .1em; /* Added left margin */
 
+  
   &::after {
     @include line(auto, $line-pos, $darkgreen);
   }

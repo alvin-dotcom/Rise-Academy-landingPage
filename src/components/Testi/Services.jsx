@@ -41,7 +41,7 @@ export default class Testimonials extends Component {
         <div>
           {/* <img src="/images/jatin.png" /> */}
           <div className="myCarousel">
-            <h3>Divyanshu Kumar (Batch 22)</h3>
+            <h3>Divyanshu Kumar (Batch 23)</h3>
             <h4>student</h4>
             <p>
             As a slow learner I always needed extra from my teachers, and sir was always there for me. he gives individual attention to each student
@@ -51,7 +51,7 @@ export default class Testimonials extends Component {
         <div>
           {/* <img src="/images/jatin.png" /> */}
           <div className="myCarousel">
-            <h3>Aayush Kumar (Batch 22)</h3>
+            <h3>Aayush Kumar (Batch 23)</h3>
             <h4>student</h4>
             <p>
             Joined in class 12.I was so frustrated after taking science stream. But his way of teaching changed the situation and my grades too
